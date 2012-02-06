@@ -1,0 +1,51 @@
+% layout 'default';
+% my $title = $photo->set->decoded_title . '-' . $photo->idx . ' of ' . $photo->set->photos->count;
+% title $title;
+
+
+<div id="<%= $photo->id %>" class="photo wide slide">
+  <span class="pagetitle hidden"><%= $title %></span>
+  <h1><a
+        class="title" 
+        href="/photos/<%= $photo->set->url_title %>"
+        title="<%= $photo->set->id %>">
+      %= $photo->set->decoded_title
+    </a>
+  </h1>
+
+  <div class="nav">
+    % if ($photo->previous) {
+      <a class="previous" href="/photos/<%= $photo->previous->id %>">
+        Previous</a>
+    % }
+    % if ($photo->next) {
+      <a class="previous" href="/photos/<%= $photo->next->id %>">
+        Next</a>
+    % }
+  </div>
+
+  <ul class="horizontal-list">
+    <li><span class="location">
+      <%= $photo->location %></span></li>
+    <li><span class="time">
+      <%= $photo->taken->month_name %>, <%= $photo->taken->year %></span></li>
+    <li><span class="time_since">
+      <%= $photo->time_since %></span></li>
+    <li><span class="count">
+      <%= $photo->idx %> of <%= $photo->set->photos->count %></span></li>
+  </ul>
+
+  <br />
+
+  <div class="photos">
+    % if ($photo->next) {
+      <a class="photo next" href="/photos/<%= $photo->next->id %>">
+        <img src="<%= $photo->medium %>" alt="<%= $photo->description %>" /></a>
+    % }
+    % else {
+      <a class="photo" href="/photos/<%= $photo->set->url_title %>">
+        <img src="<%= $photo->medium %>" alt="<%= $photo->description %>" /></a>
+    % }
+  </div>
+
+</div>

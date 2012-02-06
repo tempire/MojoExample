@@ -1,0 +1,54 @@
+---
+generation: 178
+last_run_time: 1328521489.68078
+tests:
+  t/blogs.t:
+    elapsed: 0.613458156585693
+    gen: 77
+    last_fail_time: 1328517590.27978
+    last_pass_time: 1328517709.14368
+    last_result: 0
+    last_run_time: 1328517709.14368
+    last_todo: 0
+    mtime: 1328517530
+    seq: 77
+    total_failures: 64
+    total_passes: 13
+  t/photos.t:
+    elapsed: 1.64988017082214
+    gen: 80
+    last_fail_time: 1328517877.35215
+    last_pass_time: 1328518154.94748
+    last_result: 0
+    last_run_time: 1328518154.94748
+    last_todo: 0
+    mtime: 1328517706
+    seq: 80
+    total_failures: 2
+    total_passes: 1
+  t/schema/blog.t:
+    elapsed: 0.485749006271362
+    gen: 86
+    last_fail_time: 1328518433.78948
+    last_pass_time: 1328518482.65886
+    last_result: 0
+    last_run_time: 1328518482.65886
+    last_todo: 0
+    mtime: 1328518451
+    seq: 86
+    total_failures: 4
+    total_passes: 2
+  t/schema/photo.t:
+    elapsed: 0.491823196411133
+    gen: 178
+    last_fail_time: 1328521389.02062
+    last_pass_time: 1328521489.68009
+    last_result: 0
+    last_run_time: 1328521489.68009
+    last_todo: 0
+    mtime: 1328518546
+    seq: 178
+    total_failures: 65
+    total_passes: 27
+version: 1
+...

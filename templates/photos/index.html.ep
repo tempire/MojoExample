@@ -1,0 +1,30 @@
+% layout 'default';
+% title int(@$sets) . ' Phased albums';
+
+%= $photo_count
+photos in
+%= int @$sets
+albums
+
+<div id="photosets" class="thumbnails photos">
+
+  % for my $set (reverse @$sets) {
+
+    <div id="<%= $set->id %>" 
+      class="photo <%= lc $set->date->month_abbr %>">
+
+      %= link_to '/photos/' . $set->url_title => begin
+        <div class="label"><%= $set->photos->count %></div>
+        %= image $set->primary_photo->square, alt => 'Primary photo'
+        <div class="title"><%= $set->decoded_title %></div>
+      %= end
+
+      <div class="date">
+        %= $set->date->month_name . ', ' . $set->date->year
+      </div>
+      <div class="region"><%= $set->region %></div>
+    </div>
+
+  % }
+
+</div>

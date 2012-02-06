@@ -1,0 +1,23 @@
+% layout 'default';
+
+<div class="photos mini-thumbnails home">
+
+  % my $first = shift @$photos;
+  <a href="/photos/<%= $first->id %>" class="photo">
+    <img src="<%= $first->medium %>" /></a>
+
+  % for my $photo (@$photos) {
+    <a href="/photos/<%= $photo->id %>" class="photo">
+      <img src="<%= $photo->square %>" /></a>
+  % }
+
+</div>
+
+%#<h3>
+%#  <a class="more" href="/blogs">
+%#    %= $blog->title
+%#  </a>
+%#  <p>
+%#    %= $blog->snippet
+%#  </p>
+%#</h3>

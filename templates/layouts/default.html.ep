@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+</head>
+<body>
+
+<div id="header">
+  <img class="profile" src="/images/profile_top.png" alt="Picture of Glen" />
+  <a class="home" href="/" alt="Home"></a>
+
+  % if ($self->req->url ne '/') {
+    <div class="fb_status">
+      <span class="load statii"></span>
+      <span class="time_since"></span>
+      <span class="source"></span>
+    </div>
+  % }
+
+  <ul class="toc">
+    <li><a href="/blogs">Blog</a></li>
+    <li><a href="/blogs/tag/tech">Tech</a></li>
+    <li><a href="/photos">Photos</a></li>
+  </ul>
+</div>
+
+<div id="main">
+   <div id="box-top"></div>
+
+  <div id="content">
+    <%= content %>
+  </div>
+
+  <div id="box-bottom"></div>
+</div>
+
+<div id="footer">
+   <ul>
+      <li><a href="http://facebook.com/tempire/">Facebook</a></li>
+      <li><a href="http://www.flickr.com/photos/tempire/">Flickr</a></li>
+      <li><a href="http://twitter.com/tempiretech">Twitter</a></li>
+      <li><a href="http://www.google.com/profiles/glen.hinkle">Google</a></li>
+      <li><a href="http://zombiedolphin.com">Zombie Dolphin</a></li>
+      <li><a href="http://careers.stackoverflow.com/glen">Resume</a></li>
+      <li><a href="http://github.com/tempire">Githubs</a></li>
+      <li><a href="http://search.cpan.org/~tempire/">CPAN</a></li>
+      <li><a href="http://mojocasts.com">Mojocasts</a></li>
+   </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>

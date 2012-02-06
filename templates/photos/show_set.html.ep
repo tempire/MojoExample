@@ -1,0 +1,34 @@
+% layout 'default';
+% title $set->title . ' Phased albums';
+
+<div id="<%= $set->url_title %>" class="photoset thumbnails slide photos">
+  <div class="toolbar">
+    <a href="/photos">All Photos</a>
+    % if ($set->previous) {
+      <a href="/photos/<%= $set->previous->url_title %>" class="previous">Previous</a>
+    % }
+    % if ($set->next) {
+      <a href="/photos/<%= $set->next->url_title %>" class="next">Next</a>
+    % }
+    <h1><%= $set->decoded_title %></h1>
+    <ul class="horizontal-list">
+      <li><span class="location">
+        <%= $set->location %></span></li>
+      <li><span class="time">
+        <%= $set->date->month_name %>, <%= $set->date->year %></span></li>
+      <li><span class="time_since">
+        <%= $set->time_since %></span></li>
+      <li><span class="count">
+        <%= $set->photos->count %> Photos</span></li>
+    </ul>
+  </div>
+  <div class="photos">
+    % foreach my $photo ( $set->photos->all ) {
+      <a href="/photos/<%= $photo->id %>"
+          class="slide"
+          rel:index="<%= $photo->idx %>" 
+          rel:medium="<%= $photo->medium %>">
+        <img src="<%= $photo->square %>" /></a>
+    % }
+  </div>
+</div>
