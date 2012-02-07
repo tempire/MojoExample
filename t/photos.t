@@ -1,13 +1,11 @@
 use Modern::Perl +2012;
-
 use Test::More;
 use Test::Mojo;
 use Schema;
 use Test::Database;
 
-$ENV{TEST_DB} = 'test.db';
-my $t = Test::Mojo->new('MojoFull');
-Test::Database->new_test(Schema => $ENV{TEST_DB}, home_path => $t->app->home);
+my $schema = Test::Database->new->create(Schema => 'test.db');
+my $t = Test::Mojo->new('MojoFull')->app(schema => $schema);
 
 # Photo not found
 $t->get_ok('/photos/bad_title')->status_is(302);

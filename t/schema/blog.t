@@ -1,13 +1,9 @@
 use Modern::Perl +2012;
-use Test::Most;
+use Test::More;
 use Schema;
-use Test::Mojo;
 use Test::Database;
 
-my $t = Test::Mojo->new('MojoFull');
-my $schema =
-  Test::Database->new_test(Schema => ':memory:', home_path => $t->app->home)
-  ->schema;
+my $schema = Test::Database->new->create(Schema => ':memory:');
 
 my $blog_id        = '1';
 my $blog_title     = 'Hello!';
@@ -19,6 +15,7 @@ is $blog->url_title => $blog_url_title, 'url title';
 is ref $blog->created_time => 'DateTime', 'DateTime object';
 is $blog->created_time_string => 'Wednesday, April  6, 2011 at  2:27AM',
   'pretty time string';
+
 #ok $blog->snippet;
 
 # Tags

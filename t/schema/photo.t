@@ -1,20 +1,16 @@
-use Modern::Perl + 2012;
-use Test::Most;
+use Modern::Perl +2012;
+use Test::More;
 use Schema;
-use Test::Mojo;
 use Test::Database;
 
-my $t = Test::Mojo->new('MojoFull');
-my $schema =
-  Test::Database->new_test(Schema => ':memory:', home_path => $t->app->home)
-  ->schema;
+my $schema = Test::Database->new->create(Schema => ':memory:');
 
-my $photo_id = '4729801945';
+my $photo_id      = '4729801945';
 my $next_photo_id = '2253839375';
 my $prev_photo_id = '4730456558';
 my $photoset_id   = '72157624347519408';
 
-my $photo  = $schema->resultset('Photo')->find($photo_id);
+my $photo = $schema->resultset('Photo')->find($photo_id);
 
 is $photo->location => 'Chico, California';
 

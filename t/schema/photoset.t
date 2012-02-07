@@ -1,17 +1,12 @@
-use Test::Database;
-use Modern::Perl + 2012;
-use Test::Most;
+use Modern::Perl +2012;
+use Test::More;
 use Schema;
-use Test::Mojo;
 use Test::Database;
 
-my $t = Test::Mojo->new('MojoFull');
-my $schema =
-  Test::Database->new_test(Schema => ':memory:', home_path => $t->app->home)
-  ->schema;
+my $schema = Test::Database->new->create(Schema => ':memory:');
 
 my $photoset_id      = '72157624222825789';
-my $photoset_title   = 'robot_arms_apts_';
+my $photoset_title   = 'robot_arms';
 my $prev_photoset_id = '72157624222820921';
 my $next_photoset_id = '72157624347519408';
 

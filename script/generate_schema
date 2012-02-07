@@ -6,7 +6,7 @@ use DBIx::Class::Schema::Loader 'make_schema_at';
 my $DEBUG = @ARGV and $ARGV[0] =~ /^\-[\-]*v/;
 
 say $DBIx::Class::Schema::Loader::VERSION if $DEBUG;
-my @dsn = 'dbi:SQLite:dbname=some.db';
+my @dsn = 'dbi:SQLite:dbname=test.db';
 
 my $options = {
   debug          => $DEBUG,
