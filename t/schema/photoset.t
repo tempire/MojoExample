@@ -10,9 +10,9 @@ my $photoset_title   = 'robot_arms';
 my $prev_photoset_id = '72157624222820921';
 my $next_photoset_id = '72157624347519408';
 
-is $schema->resultset('Photoset')->by_id_or_title($photoset_id)->id =>
+is $schema->resultset('Photoset')->by_id_or_name($photoset_id)->id =>
   $photoset_id;
-is $schema->resultset('Photoset')->by_id_or_title($photoset_title)->id =>
+is $schema->resultset('Photoset')->by_id_or_name($photoset_title)->id =>
   $photoset_id;
 
 my $set = $schema->resultset('Photoset')->find($photoset_id);

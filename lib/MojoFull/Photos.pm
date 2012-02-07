@@ -25,7 +25,7 @@ sub show_set {
   my $self = shift;
   my $id   = $self->param('id');
 
-  my $set = $self->db->resultset('Photoset')->by_id_or_title($id)
+  my $set = $self->db->resultset('Photoset')->by_id_or_name($id)
     or $self->redirect_to("/photos"), return;
 
   $self->render(template => 'photos/show_set', set => $set);

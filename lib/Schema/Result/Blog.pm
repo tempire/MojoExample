@@ -42,47 +42,47 @@ __PACKAGE__->has_many(
 # Created by DBIx::Class::Schema::Loader v0.07015 @ 2012-02-05 21:35:07
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Pu8So1Y80nFfvuHrqLpqag
 
-
 use Time::Duration;
 use DateTime;
 use Lingua::EN::Summarize 'summarize';
 
 # Convert date strings to datetime objects, and vice versa
-__PACKAGE__->inflate_column( "created_time", {
-   inflate => sub { DateTime->from_epoch( epoch => shift ); }, 
-   deflate => sub { shift->epoch; }, 
-} );
+__PACKAGE__->inflate_column(
+  "created_time",
+  { inflate => sub { DateTime->from_epoch(epoch => shift); },
+    deflate => sub { shift->epoch; },
+  }
+);
 
 __PACKAGE__->has_many(
-  "tags",
-  "Schema::Result::BlogTag",
-  { "foreign.blog" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
+  "tags", "Schema::Result::BlogTag",
+  {"foreign.blog" => "self.id"},
+  {cascade_copy   => 0, cascade_delete => 0},
 );
 
 sub url_title {
-    my $self  = shift;
-    my $title = $self->title;
+  my $self  = shift;
+  my $title = $self->title;
 
-    $title =~ s/\W/_/g;
+  $title =~ s/\W/_/g;
 
-    return lc $title;
+  return lc $title;
 }
 
 sub time_since {
-    return Time::Duration::ago(time - shift->created_time->epoch);
+  return Time::Duration::ago(time - shift->created_time->epoch);
 }
 
 sub created_time_string {
-    return shift->created_time->strftime("%A, %B %e, %Y at %l:%M%p");
+  return shift->created_time->strftime("%A, %B %e, %Y at %l:%M%p");
 }
 
 sub snippet {
-    return summarize(
-        shift->content,
-        maxlength => 200,
-        filter    => 'html'
-    );
+  return summarize(
+    shift->content,
+    maxlength => 200,
+    filter    => 'html'
+  );
 }
 
 1;

@@ -3,13 +3,17 @@ package Schema::ResultSet::Photoset;
 use Modern::Perl +2012;
 use base 'DBIx::Class::ResultSet';
 
-sub by_id_or_title {
-  my $self  = shift;
-  my $title = shift;
+sub by_id {
+  return shift->find({id => pop});
+}
 
-  return $self->find($title) if $title =~ /^\d+$/;
+sub by_name {
+  return shift->find({title => {LIKE => pop}});
+}
 
-  return $self->find( { title => { "LIKE" => $title } } );
+sub by_id_or_name {
+  my ($self, $param) = @_;
+  return $param =~ /^\d+$/ ? $self->by_id($param) : $self->by_name($param);
 }
 
 sub faces {

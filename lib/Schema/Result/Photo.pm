@@ -73,15 +73,13 @@ __PACKAGE__->has_many(
 # Created by DBIx::Class::Schema::Loader v0.07015 @ 2012-02-05 21:35:07
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:hBwyD8s8bHZ6aae1bl2a3Q
 
-
 use Time::Duration;
 
 __PACKAGE__->belongs_to(
   "set",
   "Schema::Result::Photoset",
-  { id => "photoset" },
-  {
-    is_deferrable => 1,
+  {id => "photoset"},
+  { is_deferrable => 1,
     join_type     => "LEFT",
     on_delete     => "CASCADE",
     on_update     => "CASCADE",
@@ -89,7 +87,7 @@ __PACKAGE__->belongs_to(
 );
 
 sub location {
-  return join ', ' => grep {defined} map {$_->locality, $_->region} shift;
+  return join ', ' => grep {defined} map { $_->locality, $_->region } shift;
 }
 
 sub next {
@@ -101,19 +99,20 @@ sub next {
 }
 
 sub previous {
-    my $self = shift;
+  my $self = shift;
 
-    return if !$self->idx;
+  return if !$self->idx;
 
-    return $self->result_source->resultset->find(
-        {   photoset => $self->set->id,
-            idx      => $self->idx - 1
-        }
-    );
+  return $self->result_source->resultset->find(
+    { photoset => $self->set->id,
+      idx      => $self->idx - 1
+    }
+  );
 }
 
 sub time_since {
-    return Time::Duration::ago(time - $_->taken->epoch) for grep $_->taken => shift;
+  return Time::Duration::ago(time - $_->taken->epoch)
+    for grep $_->taken => shift;
 }
 
 =head1 RELATIONSHIPS
