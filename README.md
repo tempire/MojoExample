@@ -1,3 +1,5 @@
+<img src="http://empireenterprises.com/skitch//localhost_3000_photos-20120207-120707.png" />
+
 # Purpose
 
 - Compare a full Mojolicious app to a lite app with the same functionality.
