@@ -73,16 +73,16 @@ To run the lite app:
     * blogs.t           - Blogs.pm controller tests
     * photos.t          - Photos.pm controller tests
 * templates/
-    * blogs/
+    * blogs/ - Blogs.pm templates
         * index.html.ep
         * show.html.ep
-    * home/
+    * home/ - Home.pm templates
         * index.html.ep
-    * layouts/
-        * default.html.ep
-    * photos/
+    * photos/ - Photos.pm templates
         * index.html.ep
         * show.html.ep
         * show_set.html.ep
+    * layouts/
+        * default.html.ep
 * *mojolite*          - Mojolicious::Lite app, with all the application files listed above embedded
 * README.md           - This file
