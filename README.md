@@ -25,6 +25,8 @@ To run the full app:
 To run the lite app:
 `morbo mojolite`
 
+(Both the Full and Lite apps are identical in functionality)
+
 # Index
 
 * lib/
