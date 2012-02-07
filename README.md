@@ -35,12 +35,12 @@ To run the lite app:
       * Photos.pm
   * Schema.pm         - DBIx::Class model 
   * Schema/
-      * Result/         - Result classes
+      * Result/         - DBIx::Class Result classes
           * Blog.pm
           * BlogTag.pm
           * Photo.pm
           * Photoset.pm
-      * ResultSet/      - ResultSet classes
+      * ResultSet/      - DBIx::Class ResultSet classes
           * Blog.pm
           * Photo.pm
           * Photoset.pm
