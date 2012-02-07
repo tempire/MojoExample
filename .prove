@@ -1,89 +1,89 @@
 ---
-generation: 355
-last_run_time: 1328604142.34036
+generation: 356
+last_run_time: 1328604466.24688
 tests:
   "./t/blogs.t":
-    elapsed: 0.616384983062744
-    gen: 355
-    last_pass_time: 1328604139.87366
+    elapsed: 0.630967140197754
+    gen: 356
+    last_pass_time: 1328604463.76064
     last_result: 0
-    last_run_time: 1328604139.87366
+    last_run_time: 1328604463.76064
     last_todo: 0
     mtime: 1328603279
-    seq: 494
-    total_passes: 22
+    seq: 501
+    total_passes: 23
   "./t/home.t":
-    elapsed: 0.505528211593628
-    gen: 355
+    elapsed: 0.502776145935059
+    gen: 356
     last_fail_time: 1328585288.68917
-    last_pass_time: 1328604140.38323
+    last_pass_time: 1328604464.26706
     last_result: 0
-    last_run_time: 1328604140.38323
+    last_run_time: 1328604464.26706
     last_todo: 0
     mtime: 1328603336
-    seq: 495
+    seq: 502
     total_failures: 5
-    total_passes: 12
+    total_passes: 13
   "./t/photos.t":
-    elapsed: 0.635895013809204
-    gen: 355
+    elapsed: 0.639663934707642
+    gen: 356
     last_fail_time: 1328604114.28195
-    last_pass_time: 1328604141.02298
+    last_pass_time: 1328604464.9104
     last_result: 0
-    last_run_time: 1328604141.02298
+    last_run_time: 1328604464.9104
     last_todo: 0
     mtime: 1328603320
-    seq: 496
+    seq: 503
     total_failures: 7
-    total_passes: 15
+    total_passes: 16
   "./t/schema/blog.t":
-    elapsed: 0.321397066116333
-    gen: 355
+    elapsed: 0.335060834884644
+    gen: 356
     last_fail_time: 1328586488.93091
-    last_pass_time: 1328604141.3483
+    last_pass_time: 1328604465.24935
     last_result: 0
-    last_run_time: 1328604141.3483
+    last_run_time: 1328604465.24935
     last_todo: 0
     mtime: 1328603441
-    seq: 497
+    seq: 504
     total_failures: 6
-    total_passes: 16
+    total_passes: 17
   "./t/schema/blog_tag.t":
-    elapsed: 0.304280042648315
-    gen: 355
+    elapsed: 0.311743021011353
+    gen: 356
     last_fail_time: 1328566948.33437
-    last_pass_time: 1328604141.65637
+    last_pass_time: 1328604465.565
     last_result: 0
-    last_run_time: 1328604141.65637
+    last_run_time: 1328604465.565
     last_todo: 0
     mtime: 1328603421
-    seq: 498
+    seq: 505
     total_failures: 2
-    total_passes: 20
+    total_passes: 21
   "./t/schema/photo.t":
-    elapsed: 0.33493185043335
-    gen: 355
+    elapsed: 0.331784963607788
+    gen: 356
     last_fail_time: 1328573135.53693
-    last_pass_time: 1328604141.99501
+    last_pass_time: 1328604465.9007
     last_result: 0
-    last_run_time: 1328604141.99501
+    last_run_time: 1328604465.9007
     last_todo: 0
     mtime: 1328603418
-    seq: 499
+    seq: 506
     total_failures: 4
-    total_passes: 18
+    total_passes: 19
   "./t/schema/photoset.t":
-    elapsed: 0.340795040130615
-    gen: 355
+    elapsed: 0.34162712097168
+    gen: 356
     last_fail_time: 1328600792.85687
-    last_pass_time: 1328604142.33966
+    last_pass_time: 1328604466.24618
     last_result: 0
-    last_run_time: 1328604142.33966
+    last_run_time: 1328604466.24618
     last_todo: 0
     mtime: 1328604107
-    seq: 500
+    seq: 507
     total_failures: 13
-    total_passes: 9
+    total_passes: 10
   t/blogs.t:
     elapsed: 0.613529205322266
     gen: 351
