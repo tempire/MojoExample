@@ -6,7 +6,7 @@
 <body>
 
 <div id="header">
-  <img class="profile" src="/images/profile_top.png" alt="Picture of Glen" />
+  <img class="profile" src="/images/bender_promo.png" />
   <a class="home" href="/" alt="Home"></a>
 
   % if ($self->req->url ne '/') {
@@ -36,15 +36,11 @@
 
 <div id="footer">
    <ul>
-      <li><a href="http://facebook.com/tempire/">Facebook</a></li>
-      <li><a href="http://www.flickr.com/photos/tempire/">Flickr</a></li>
-      <li><a href="http://twitter.com/tempiretech">Twitter</a></li>
-      <li><a href="http://www.google.com/profiles/glen.hinkle">Google</a></li>
-      <li><a href="http://zombiedolphin.com">Zombie Dolphin</a></li>
-      <li><a href="http://careers.stackoverflow.com/glen">Resume</a></li>
-      <li><a href="http://github.com/tempire">Githubs</a></li>
-      <li><a href="http://search.cpan.org/~tempire/">CPAN</a></li>
+      <li><a href="http://mojolicio.us">Mojolicious</a></li>
       <li><a href="http://mojocasts.com">Mojocasts</a></li>
+      <li><a href="http://github.com/kraih/mojo">Github</a></li>
+      <li><a href="http://search.cpan.org/dist/Mojolicious/">CPAN</a></li>
+      <li><a href="http://zombiedolphin.com">Zombie Dolphin</a></li>
    </ul>
 </div>
 

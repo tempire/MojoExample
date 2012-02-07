@@ -92,6 +92,7 @@ __PACKAGE__->belongs_to(
 );
 
 
+use Devel::Dwarn;
 sub date   { shift->primary_photo->taken }
 sub region { shift->primary_photo->region }
 
@@ -103,10 +104,8 @@ sub url_title {
   my $title = $self->decoded_title;
   $title =~ s/[^a-zA-Z0-9]+/_/g;
 
-  warn $title if $self->id eq '72157621680562327';
   # Other languages don't translate to url naming Scheme
   return $self->id if $title eq '_';
-  warn $title if $self->id eq '72157621680562327';
 
   return lc $title;
 }

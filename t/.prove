@@ -1,0 +1,16 @@
+---
+generation: 2
+last_run_time: 1328567377.29599
+tests:
+  home.t:
+    elapsed: 0.128877878189087
+    gen: 2
+    last_fail_time: 1328567377.29512
+    last_result: 1
+    last_run_time: 1328567377.29512
+    last_todo: 0
+    mtime: 1328567341
+    seq: 2
+    total_failures: 2
+version: 1
+...

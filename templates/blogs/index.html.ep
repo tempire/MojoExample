@@ -1,39 +1,34 @@
 % layout 'default';
 % title 'Phased Blog';
 
-<ul id="blogs">
+%= t ul => id => 'blogs' => begin
 
   % for my $blog (@$blogs) {
 
-    <li id="<%= $blog->url_title %>" class="blog snippet">
-    <a name="id<%= $blog->id %>"></a>
-    <a name="<%= $blog->url_title %>"></a>
-    <h2>
-      <a class="more" href="/blogs/<%= $blog->url_title %>">
-        %= $blog->title
-      </a>
-    </h2>
-    <div class="tags">
+    %= t li => id => $blog->url_title, class => 'blog snippet' => begin
+      %= t a => name => 'id'.$blog->id
+      %= t a => name => $blog->url_title
+      %= t h2 => begin
+        %= link_to $blog->title => '/blogs/'.$blog->url_title, class => 'more'
+      % end
 
-      % for my $tag ($blog->tags) {
-        <span class="tag">
-          %= $tag->name
-        </span>
+      %= t div => class => 'tags' => begin
+        % for my $tag ($blog->tags) {
+          %= t span => class => 'tag' => $tag->name
+        % }
+      % end
+
+      % if ($blog->subtitle) {
+        %= t h3 => class => 'subtitle' => $blog->subtitle
       % }
 
-    </div>
+      %= t h3 => class => 'time', title => $blog->time_since => $blog->created_time_string
 
-    % if ($blog->subtitle) {
-      <h3 class="subtitle"><%= $blog->subtitle %></h3>
-    % }
-
-    <h3 class="time" title="<%= $blog->time_since %>"><%= $blog->created_time_string %></h3>
-    <div class="content snippet">
-      %= $blog->snippet
-      <a class="more" href="/blogs/<%= $blog->url_title %>">More</a>
-    </div>
-  </li>
-
+      %= t div => class => 'content snippet' => begin
+        %= $blog->snippet
+        %= link_to 'More' => '/blogs/'.$blog->url_title, class => 'more'
+      %= end
+    % end
   % }
 
-</ul>
+% end

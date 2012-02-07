@@ -12,12 +12,3 @@
   % }
 
 </div>
-
-%#<h3>
-%#  <a class="more" href="/blogs">
-%#    %= $blog->title
-%#  </a>
-%#  <p>
-%#    %= $blog->snippet
-%#  </p>
-%#</h3>

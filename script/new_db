@@ -1,0 +1,8 @@
+use Modern::Perl +2012;
+use lib 'lib';
+use Test::Mojo;
+use Test::Database;
+use Schema;
+
+my $t = Test::Mojo->new('MojoFull');
+Test::Database->new_test(Schema => ($ENV{TEST_DB}||'test.db'), home_path => $t->app->home);

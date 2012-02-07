@@ -43,7 +43,7 @@
         <img src="<%= $photo->medium %>" alt="<%= $photo->description %>" /></a>
     % }
     % else {
-      <a class="photo" href="/photos/<%= $photo->set->url_title %>">
+      <a class="photo previous" href="/photos/<%= $photo->set->url_title %>">
         <img src="<%= $photo->medium %>" alt="<%= $photo->description %>" /></a>
     % }
   </div>

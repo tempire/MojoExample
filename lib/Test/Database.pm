@@ -17,7 +17,7 @@ our $schema;
 
 use Mojo::Base -base;
 has [qw/ schema file home_path /];
-has db_name => 'nempire.db';
+has db_name => 'test.db';
 
 sub import {
   my $self = shift;
@@ -43,11 +43,11 @@ sub import {
 
 sub new_production {
   my $self = bless {} => shift;
-  my $dbname = shift;
+  my ($schema_name, $dbname) = @_;
 
   $self->file($dbname || dirname(abs_path($0)) . '/../' . $self->db_name);
 
-  $schema = $self->_new($self->file);
+  my $schema = $self->_new($schema_name => $self->file);
   $self->schema($schema);
 
   return $self;
@@ -55,13 +55,13 @@ sub new_production {
 
 sub new_test {
   my $self = shift->SUPER::new(@_);
-  my ($schema, $dbname) = @_;
+  my ($schema_name, $dbname) = @_;
 
   # In-memory sqlite db is quite zippy
   # dbname parameter is for controller testing - cannot use in-memory db
   $self->file($ENV{TEST_DB} || $dbname || ':memory:');
 
-  $schema = $self->_new($schema => $self->file);
+  my $schema = $self->_new($schema_name => $self->file);
   $self->schema($schema);
 
   return $self;

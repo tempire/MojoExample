@@ -3,8 +3,7 @@ use Mojo::Base 'Mojolicious';
 use Schema;
 
 has schema => sub {
-  my $dsn = 'dbi:SQLite:' . ($ENV{TEST_DB} || 'some.db');
-  return Schema->connect($dsn);
+  return Schema->connect('dbi:SQLite:' . ($ENV{TEST_DB} || 'test.db'));
 };
 
 # This method will run once at server start

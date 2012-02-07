@@ -8,9 +8,9 @@ sub index {
     'home/index',
     blog   => $self->db->resultset('Blog')->latest,
     photos => [
-      $self->db->resultset('Photoset')->find('72157618164628634')
-        ->photos->latest(33)
-    ];
+      $self->db->resultset('Photoset')->first->photos->latest(2)
+    ]
   );
 }
 
+1;

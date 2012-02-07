@@ -19,7 +19,7 @@
       <li><span class="time_since">
         <%= $set->time_since %></span></li>
       <li><span class="count">
-        <%= $set->photos->count %> Photos</span></li>
+        <%= $set->photos->count %> Photo<%= $set->photos->count == 1 ? '' : 's' %></span></li>
     </ul>
   </div>
   <div class="photos">

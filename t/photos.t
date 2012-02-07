@@ -5,8 +5,9 @@ use Test::Mojo;
 use Schema;
 use Test::Database;
 
+$ENV{TEST_DB} = 'test.db';
 my $t = Test::Mojo->new('MojoFull');
-Test::Database->new_test(Schema => 'test.db', home_path => $t->app->home);
+Test::Database->new_test(Schema => $ENV{TEST_DB}, home_path => $t->app->home);
 
 # Photo not found
 $t->get_ok('/photos/bad_title')->status_is(302);

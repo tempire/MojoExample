@@ -9,17 +9,17 @@ my $schema =
   Test::Database->new_test(Schema => ':memory:', home_path => $t->app->home)
   ->schema;
 
-my $photo_id      = '4839028825';
-my $next_photo_id = '4839028523';
-my $prev_photo_id = '4839640560';
-my $photoset_id   = '72157618164628634';
+my $photo_id = '4729801945';
+my $next_photo_id = '2253839375';
+my $prev_photo_id = '4730456558';
+my $photoset_id   = '72157624347519408';
 
 my $photo  = $schema->resultset('Photo')->find($photo_id);
 
-is $photo->location => 'League City, Texas';
+is $photo->location => 'Chico, California';
 
 ok $photo->update({region => undef});
-is $photo->location => 'League City', 'location';
+is $photo->location => 'Chico';
 
 ok $photo->update({locality => undef, region => 'Texas'});
 is $photo->location => 'Texas', 'location';

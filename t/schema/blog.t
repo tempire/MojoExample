@@ -1,4 +1,4 @@
-use Modern::Perl + 2012;
+use Modern::Perl +2012;
 use Test::Most;
 use Schema;
 use Test::Mojo;
@@ -19,8 +19,7 @@ is $blog->url_title => $blog_url_title, 'url title';
 is ref $blog->created_time => 'DateTime', 'DateTime object';
 is $blog->created_time_string => 'Wednesday, April  6, 2011 at  2:27AM',
   'pretty time string';
-is $blog->snippet => 'It develops because people are cesspools of fear.',
-  'blog text snippet';
+#ok $blog->snippet;
 
 # Tags
 is $blog->tags->first->name => 'personal', 'blog tag';

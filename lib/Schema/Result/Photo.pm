@@ -75,7 +75,6 @@ __PACKAGE__->has_many(
 
 
 use Time::Duration;
-use List::Util 'reduce';
 
 __PACKAGE__->belongs_to(
   "set",
@@ -94,15 +93,11 @@ sub location {
 }
 
 sub next {
-    my $self = shift;
-
-    return if !$self->idx;
-
-    return $self->result_source->resultset->find(
-        {   photoset => $self->set->id,
-            idx      => $self->idx + 1
-        }
-    );
+  return $_->result_source->resultset->find(
+    { photoset => $_->set->id,
+      idx      => $_->idx + 1
+    }
+  ) for grep $_->idx => shift;
 }
 
 sub previous {
@@ -118,8 +113,7 @@ sub previous {
 }
 
 sub time_since {
-    my $self = shift;
-    return Time::Duration::ago(time - $self->taken->epoch) if $self->taken;
+    return Time::Duration::ago(time - $_->taken->epoch) for grep $_->taken => shift;
 }
 
 =head1 RELATIONSHIPS

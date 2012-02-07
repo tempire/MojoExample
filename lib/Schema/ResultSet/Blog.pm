@@ -12,15 +12,12 @@ sub by_name {
 }
 
 sub by_id_or_name {
-  my $self  = shift;
-  my $param = shift;
+  my ($self, $param) = @_;
   return $param =~ /^\d+$/ ? $self->by_id($param) : $self->by_name($param);
-  #return map /^\d+$/ ? $self->by_id($_) : $self->by_name($_) => shift;
 }
 
 sub by_tags {
-  my $self = shift;
-  my @tags = @_;
+  my ($self, @tags) = @_;
 
   return if !@tags;
 
