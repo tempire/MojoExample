@@ -1,7 +1,6 @@
 % layout 'default';
 
-
-<div class="announce instapaper_body md" data-path="/" id="readme"><span class="name"><span class="icon"></span></span><article class="markdown-body"><h1>Purpose</h1>
+<h1>Purpose</h1>
 
 <ul>
 <li>Compare a full Mojolicious app to a lite app with the same functionality.</li>
@@ -26,6 +25,8 @@ fixtures from t/fixtures/*</li>
 <p>To run the lite app:
 <code>morbo mojolite</code></p>
 
+<p>(Both the Full and Lite apps are identical in functionality)</p>
+
 <h1>Index</h1>
 
 <ul>
@@ -45,7 +46,7 @@ fixtures from t/fixtures/*</li>
 <li>Schema/
 
 <ul>
-<li>Result/         - Result classes
+<li>Result/         - DBIx::Class Result classes
 
 <ul>
 <li>Blog.pm</li>
@@ -54,7 +55,7 @@ fixtures from t/fixtures/*</li>
 <li>Photoset.pm</li>
 </ul>
 </li>
-<li>ResultSet/      - ResultSet classes
+<li>ResultSet/      - DBIx::Class ResultSet classes
 
 <ul>
 <li>Blog.pm</li>
@@ -129,17 +130,25 @@ fixtures from t/fixtures/*</li>
 <li>templates/
 
 <ul>
-<li>blogs/
+<li>blogs/ - Blogs.pm templates
 
 <ul>
 <li>index.html.ep</li>
 <li>show.html.ep</li>
 </ul>
 </li>
-<li>home/
+<li>home/ - Home.pm templates
 
 <ul>
 <li>index.html.ep</li>
+</ul>
+</li>
+<li>photos/ - Photos.pm templates
+
+<ul>
+<li>index.html.ep</li>
+<li>show.html.ep</li>
+<li>show_set.html.ep</li>
 </ul>
 </li>
 <li>layouts/
@@ -148,17 +157,9 @@ fixtures from t/fixtures/*</li>
 <li>default.html.ep</li>
 </ul>
 </li>
-<li>photos/
-
-<ul>
-<li>index.html.ep</li>
-<li>show.html.ep</li>
-<li>show_set.html.ep</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>
 <em>mojolite</em>          - Mojolicious::Lite app, with all the application files listed above embedded</li>
-<li>README.md           - This file</li>
-</ul></article></div>
+</ul>
+

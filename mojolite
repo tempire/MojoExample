@@ -140,18 +140,168 @@ __DATA__
 @@ home/index.html.ep
 % layout 'default';
 
-<div class="photos mini-thumbnails home">
+<h1>Purpose</h1>
 
-  % my $first = shift @$photos;
-  <a href="/photos/<%= $first->id %>" class="photo">
-    <img src="<%= $first->medium %>" /></a>
+<ul>
+<li>Compare a full Mojolicious app to a lite app with the same functionality.</li>
+<li>See an example of DBIx::Class usage with Mojolicious</li>
+<li>See an example of tests for a Mojolicious app</li>
+</ul><h2>Notes</h2>
 
-  % for my $photo (@$photos) {
-    <a href="/photos/<%= $photo->id %>" class="photo">
-      <img src="<%= $photo->square %>" /></a>
-  % }
+<ul>
+<li>Both apps make use of the DBIx::Class schema.</li>
+<li>The schema is in lib/Schema.pm, lib/Schema/*</li>
+<li>The DBIx::Class schema connects to a provided sqlite3 database, test.db</li>
+<li>The controller tests create a new test.db, populated using fixtures from t/fixtures/*</li>
+<li>The schema tests use an in-memory sqlite3 database, populated using fixtures
+from t/fixtures</li>
+<li>Test::Database is a utility for populating the sqlite3 databases with
+fixtures from t/fixtures/*</li>
+</ul><h1>Usage</h1>
 
-</div>
+<p>To run the full app:
+<code>morbo script/mojo_full</code></p>
+
+<p>To run the lite app:
+<code>morbo mojolite</code></p>
+
+<p>(Both the Full and Lite apps are identical in functionality)</p>
+
+<h1>Index</h1>
+
+<ul>
+<li>lib/
+
+<ul>
+<li>MojoFull.pm       - Mojolicious Application</li>
+<li>MojoFull/         - Mojolicious Controllers
+
+<ul>
+<li>Blogs.pm</li>
+<li>Home.pm</li>
+<li>Photos.pm</li>
+</ul>
+</li>
+<li>Schema.pm         - DBIx::Class model </li>
+<li>Schema/
+
+<ul>
+<li>Result/         - DBIx::Class Result classes
+
+<ul>
+<li>Blog.pm</li>
+<li>BlogTag.pm</li>
+<li>Photo.pm</li>
+<li>Photoset.pm</li>
+</ul>
+</li>
+<li>ResultSet/      - DBIx::Class ResultSet classes
+
+<ul>
+<li>Blog.pm</li>
+<li>Photo.pm</li>
+<li>Photoset.pm</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Test/
+
+<ul>
+<li>Database.pm     - Utility class for populating test fixtures</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>public/             - Static files
+
+<ul>
+<li>css/
+
+<ul>
+<li>main.css</li>
+</ul>
+</li>
+<li>images/
+
+<ul>
+<li>background.gif</li>
+<li>bender_promo.png</li>
+<li>box-bottom.png</li>
+<li>box-middle.gif</li>
+<li>box-top.png</li>
+<li>profile_top.png</li>
+</ul>
+</li>
+<li>script/             - Utilities
+
+<ul>
+<li>generate_schema   - Generates DBIx::Class schema from database file</li>
+<li>mojo_full*</li>
+<li>new_db            - Generates database file from DBIx::Class and fixtures</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>t/                  - Tests
+
+<ul>
+<li>fixtures/         - Fixtures (placeholder data) for tests
+
+<ul>
+<li>Blog.pl</li>
+<li>Photoset.pl</li>
+</ul>
+</li>
+<li>schema/           - DBIx::Class model tests
+
+<ul>
+<li>blog.t</li>
+<li>blog_tag.t</li>
+<li>photo.t</li>
+<li>photoset.t</li>
+</ul>
+</li>
+<li>home.t            - Home.pm controller tests</li>
+<li>blogs.t           - Blogs.pm controller tests</li>
+<li>photos.t          - Photos.pm controller tests</li>
+</ul>
+</li>
+<li>templates/
+
+<ul>
+<li>blogs/ - Blogs.pm templates
+
+<ul>
+<li>index.html.ep</li>
+<li>show.html.ep</li>
+</ul>
+</li>
+<li>home/ - Home.pm templates
+
+<ul>
+<li>index.html.ep</li>
+</ul>
+</li>
+<li>photos/ - Photos.pm templates
+
+<ul>
+<li>index.html.ep</li>
+<li>show.html.ep</li>
+<li>show_set.html.ep</li>
+</ul>
+</li>
+<li>layouts/
+
+<ul>
+<li>default.html.ep</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<em>mojolite</em>          - Mojolicious::Lite app, with all the application files listed above embedded</li>
+</ul>
 
 @@ blogs/index.html.ep
 % layout 'default';
