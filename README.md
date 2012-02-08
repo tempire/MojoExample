@@ -22,9 +22,9 @@
 
 Perl 5.10+, Mojolicious, Modern::Perl, DBIx::Class, DateTime, Time::Duration
 
-Easy, one-step installation of pre-requisites:
+Easy, one-step installation of modules:
 <br />
-`curl -L cpanmin.us Mojolicious Modern::Perl DBIx::Class DateTime Time::Duration`
+`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime Time::Duration`
 
 If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
 
