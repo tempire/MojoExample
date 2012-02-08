@@ -17,6 +17,21 @@
 - Test::Database is a utility for populating the sqlite3 databases with
   fixtures from t/fixtures/*
 
+
+## Requirements
+
+- Perl 5.10+
+- Mojolicious
+- Modern::Perl
+- DBIx::Class
+- DateTime
+- Time::Duration
+
+Easy, one-step installation of pre-requisites:
+`curl -L cpanmin.us Mojolicious Modern::Perl DBIx::Class DateTime Time::Duration`
+
+If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> will save you!
+
 # Usage
 
 To run the full app:

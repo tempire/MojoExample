@@ -44,7 +44,6 @@ __PACKAGE__->has_many(
 
 use Time::Duration;
 use DateTime;
-use Lingua::EN::Summarize 'summarize';
 
 # Convert date strings to datetime objects, and vice versa
 __PACKAGE__->inflate_column(
@@ -78,11 +77,7 @@ sub created_time_string {
 }
 
 sub snippet {
-  return summarize(
-    shift->content,
-    maxlength => 200,
-    filter    => 'html'
-  );
+  return shift->content;
 }
 
 1;
