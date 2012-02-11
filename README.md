@@ -97,7 +97,7 @@ A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://pe
     * [photos.t](https://github.com/tempire/MojoExample/blob/master/t/photos.t)          - Photos.pm controller tests
 * [templates/](https://github.com/tempire/MojoExample/blob/master/templates/)
     * [blogs/](https://github.com/tempire/MojoExample/blob/master/templates/blogs/) - Blogs.pm templates
-        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep)
+        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep) - Tag Helpers
         * [show.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep)
     * [home/](https://github.com/tempire/MojoExample/blob/master/templates/home/) - Home.pm templates
         * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/home/index.html.ep)

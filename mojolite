@@ -303,7 +303,7 @@ and hot deployment support that just works</em>.</p>
 <a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/">blogs/</a> - Blogs.pm templates
 
 <ul>
-<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a> - Tag Helpers</li>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep">show.html.ep</a></li>
 </ul>
 </li>
