@@ -50,14 +50,14 @@ A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://pe
 
 # Index
 
-* lib/
-  * MojoFull.pm       - Mojolicious Application
-  * MojoFull/         - Mojolicious Controllers
-      * Blogs.pm
-      * Home.pm
-      * Photos.pm
-  * Schema.pm         - DBIx::Class model 
-  * Schema/
+* [lib/](https://github.com/tempire/MojoExample/blob/master/lib)
+  * [MojoFull.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm)       - Mojolicious Application
+  * [MojoFull/](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull)         - Mojolicious Controllers
+      * [Blogs.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Blogs.pm)
+      * [Home.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Home.pm)
+      * [Photos.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Photos.pm)
+  * [Schema.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm)         - DBIx::Class model 
+  * [Schema/](https://github.com/tempire/MojoExample/blob/master/lib/Schema)
       * Result/         - DBIx::Class Result classes
           * Blog.pm
           * BlogTag.pm
