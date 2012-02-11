@@ -20,7 +20,7 @@
 
 # Usage
 
-# Live
+## Live
 
 <a href="http://mojoexample.herokuapp.com/">Running on Heroku</a>
 
@@ -29,7 +29,7 @@ non-blocking I/O HTTP 1.1 and WebSocket server built around the very well
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
 and hot deployment support that just works*.
 
-# Locally
+## Locally
 
 To run the full app:
 `morbo script/mojo_full`
@@ -39,7 +39,7 @@ To run the lite app:
 
 (Both the Full and Lite apps are identical in functionality)
 
-## Requirements for running locally
+### Requirements for running locally
 
 Easy, one-step installation of modules:
 <br />
