@@ -71,7 +71,7 @@ A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://pe
         * [Database.pm](https://github.com/tempire/MojoExample/blob/master/lib/Test/Database.pm)     - Utility class for populating test fixtures
 * [public/](https://github.com/tempire/MojoExample/blob/master/public/)             - Static files
     * [css/](https://github.com/tempire/MojoExample/blob/master/public/css/)
-        * [main.css](https://github.com/tempire/MojoExample/blob/master/public/main.css)
+        * [main.css](https://github.com/tempire/MojoExample/blob/master/public/css/main.css)
     * [images/](https://github.com/tempire/MojoExample/blob/master/public/images/)
         * [background.gif](https://github.com/tempire/MojoExample/blob/master/public/images/background.gif)
         * [bender_promo.png](https://github.com/tempire/MojoExample/blob/master/public/images/bender_promo.png)
