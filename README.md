@@ -22,7 +22,7 @@
 
 Easy, one-step installation of modules:
 <br />
-`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime Time::Duration`
+`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration`
 
 A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
 
