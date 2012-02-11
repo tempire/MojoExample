@@ -51,61 +51,61 @@ A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://pe
 # Index
 
 * [lib/](https://github.com/tempire/MojoExample/blob/master/lib)
-  * [MojoFull.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm)       - Mojolicious Application
-  * [MojoFull/](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull)         - Mojolicious Controllers
-      * [Blogs.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Blogs.pm)
-      * [Home.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Home.pm)
-      * [Photos.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Photos.pm)
-  * [Schema.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm)         - DBIx::Class model 
-  * [Schema/](https://github.com/tempire/MojoExample/blob/master/lib/Schema)
-      * [Result/](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result)         - DBIx::Class Result classes
-          * [Blog.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Blog.pm)
-          * [BlogTag.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/BlogTag.pm)
-          * [Photo.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photo.pm)
-          * [Photoset.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photoset.pm)
-      * [ResultSet/](https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/)      - DBIx::Class ResultSet classes
-          * [Blog.pm](https://github.com/tempire/MojoExample/blob/master/lib/Blog.pm)
-          * [Photo.pm](https://github.com/tempire/MojoExample/blob/master/lib/Photo.pm)
-          * [Photoset.pm](https://github.com/tempire/MojoExample/blob/master/lib/Photoset.pm)
+    * [MojoFull.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm)       - Mojolicious Application
+    * [MojoFull/](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull)         - Mojolicious Controllers
+        * [Blogs.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Blogs.pm)
+        * [Home.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Home.pm)
+        * [Photos.pm](https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Photos.pm)
+    * [Schema.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm)         - DBIx::Class model 
+    * [Schema/](https://github.com/tempire/MojoExample/blob/master/lib/Schema)
+        * [Result/](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result)         - DBIx::Class Result classes
+            * [Blog.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Blog.pm)
+            * [BlogTag.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/BlogTag.pm)
+            * [Photo.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photo.pm)
+            * [Photoset.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photoset.pm)
+        * [ResultSet/](https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/)      - DBIx::Class ResultSet classes
+            * [Blog.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Blog.pm)
+            * [Photo.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Photo.pm)
+            * [Photoset.pm](https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Photoset.pm)
     * [Test/](https://github.com/tempire/MojoExample/blob/master/lib/Test/)
-        * [Database.pm](https://github.com/tempire/MojoExample/blob/master/lib/Database.pm)     - Utility class for populating test fixtures
-* [public/](https://github.com/tempire/MojoExample/blob/master/lib/public/)             - Static files
-    * [css/](https://github.com/tempire/MojoExample/blob/master/lib/css/)
-        * [main.css](https://github.com/tempire/MojoExample/blob/master/lib/main.css)
-    * [images/](https://github.com/tempire/MojoExample/blob/master/lib/images/)
-        * [background.gif](https://github.com/tempire/MojoExample/blob/master/lib/background.gif)
-        * [bender_promo.png](https://github.com/tempire/MojoExample/blob/master/lib/bender_promo.png)
-        * [box-bottom.png](https://github.com/tempire/MojoExample/blob/master/lib/box-bottom.png)
-        * [box-middle.gif](https://github.com/tempire/MojoExample/blob/master/lib/box-middle.gif)
-        * [box-top.png](https://github.com/tempire/MojoExample/blob/master/lib/box-top.png)
-        * [profile_top.png](https://github.com/tempire/MojoExample/blob/master/lib/profile_top.png)
-    * [script/](https://github.com/tempire/MojoExample/blob/master/lib/script/)             - Utilities
-        * [generate_schema](https://github.com/tempire/MojoExample/blob/master/lib/generate_schema)   - Generates DBIx::Class schema from database file
-        * [mojo_full*](https://github.com/tempire/MojoExample/blob/master/lib/mojo_full*)
-        * [new_db](https://github.com/tempire/MojoExample/blob/master/lib/new_db)            - Generates database file from DBIx::Class and fixtures
-* [t/](https://github.com/tempire/MojoExample/blob/master/lib/t/)                  - Tests
-    * [fixtures/](https://github.com/tempire/MojoExample/blob/master/lib/fixtures/)         - Fixtures (placeholder data) for tests
-        * [Blog.pl](https://github.com/tempire/MojoExample/blob/master/lib/Blog.pl)
-        * [Photoset.pl](https://github.com/tempire/MojoExample/blob/master/lib/Photoset.pl)
-    * [schema/](https://github.com/tempire/MojoExample/blob/master/lib/schema/)           - DBIx::Class model tests
-        * [blog.t](https://github.com/tempire/MojoExample/blob/master/lib/blog.t)
-        * [blog_tag.t](https://github.com/tempire/MojoExample/blob/master/lib/blog_tag.t)
-        * [photo.t](https://github.com/tempire/MojoExample/blob/master/lib/photo.t)
-        * [photoset.t](https://github.com/tempire/MojoExample/blob/master/lib/photoset.t)
-    * [home.t](https://github.com/tempire/MojoExample/blob/master/lib/home.t)            - Home.pm controller tests
-    * [blogs.t](https://github.com/tempire/MojoExample/blob/master/lib/blogs.t)           - Blogs.pm controller tests
-    * [photos.t](https://github.com/tempire/MojoExample/blob/master/lib/photos.t)          - Photos.pm controller tests
-* [templates/](https://github.com/tempire/MojoExample/blob/master/lib/templates/)
-    * [blogs/](https://github.com/tempire/MojoExample/blob/master/lib/blogs/) - Blogs.pm templates
-        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/index.html.ep)
-        * [show.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/show.html.ep)
-    * [home/](https://github.com/tempire/MojoExample/blob/master/lib/home/) - Home.pm templates
-        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/index.html.ep)
-    * [photos/](https://github.com/tempire/MojoExample/blob/master/lib/photos/) - Photos.pm templates
-        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/index.html.ep)
-        * [show.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/show.html.ep)
-        * [show_set.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/show_set.html.ep)
-    * [layouts/](https://github.com/tempire/MojoExample/blob/master/lib/layouts/)
-        * [default.html.ep](https://github.com/tempire/MojoExample/blob/master/lib/default.html.ep)
-* [README.md](https://github.com/tempire/MojoExample/blob/master/lib/README.md)           - This file
+        * [Database.pm](https://github.com/tempire/MojoExample/blob/master/lib/Test/Database.pm)     - Utility class for populating test fixtures
+* [public/](https://github.com/tempire/MojoExample/blob/master/public/)             - Static files
+    * [css/](https://github.com/tempire/MojoExample/blob/master/public/css/)
+        * [main.css](https://github.com/tempire/MojoExample/blob/master/public/main.css)
+    * [images/](https://github.com/tempire/MojoExample/blob/master/public/images/)
+        * [background.gif](https://github.com/tempire/MojoExample/blob/master/public/images/background.gif)
+        * [bender_promo.png](https://github.com/tempire/MojoExample/blob/master/public/images/bender_promo.png)
+        * [box-bottom.png](https://github.com/tempire/MojoExample/blob/master/public/images/box-bottom.png)
+        * [box-middle.gif](https://github.com/tempire/MojoExample/blob/master/public/images/box-middle.gif)
+        * [box-top.png](https://github.com/tempire/MojoExample/blob/master/public/images/box-top.png)
+        * [profile_top.png](https://github.com/tempire/MojoExample/blob/master/public/images/profile_top.png)
+    * [script/](https://github.com/tempire/MojoExample/blob/master/script/)             - Utilities
+        * [generate_schema](https://github.com/tempire/MojoExample/blob/master/script/generate_schema)   - Generates DBIx::Class schema from database file
+        * [mojo_full*](https://github.com/tempire/MojoExample/blob/master/script/mojo_full)
+        * [new_db](https://github.com/tempire/MojoExample/blob/master/script/new_db)            - Generates database file from DBIx::Class and fixtures
+* [t/](https://github.com/tempire/MojoExample/blob/master/t/)                  - Tests
+    * [fixtures/](https://github.com/tempire/MojoExample/blob/master/t/fixtures/)         - Fixtures (placeholder data) for tests
+        * [Blog.pl](https://github.com/tempire/MojoExample/blob/master/t/fixtures/Blog.pl)
+        * [Photoset.pl](https://github.com/tempire/MojoExample/blob/master/t/fixtures/Photoset.pl)
+    * [schema/](https://github.com/tempire/MojoExample/blob/master/t/schema/)           - DBIx::Class model tests
+        * [blog.t](https://github.com/tempire/MojoExample/blob/master/t/schema/blog.t)
+        * [blog_tag.t](https://github.com/tempire/MojoExample/blob/master/t/schema/blog_tag.t)
+        * [photo.t](https://github.com/tempire/MojoExample/blob/master/t/schema/photo.t)
+        * [photoset.t](https://github.com/tempire/MojoExample/blob/master/t/schema/photoset.t)
+    * [home.t](https://github.com/tempire/MojoExample/blob/master/t/home.t)            - Home.pm controller tests
+    * [blogs.t](https://github.com/tempire/MojoExample/blob/master/t/blogs.t)           - Blogs.pm controller tests
+    * [photos.t](https://github.com/tempire/MojoExample/blob/master/t/photos.t)          - Photos.pm controller tests
+* [templates/](https://github.com/tempire/MojoExample/blob/master/templates/)
+    * [blogs/](https://github.com/tempire/MojoExample/blob/master/templates/blogs/) - Blogs.pm templates
+        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep)
+        * [show.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep)
+    * [home/](https://github.com/tempire/MojoExample/blob/master/templates/home/) - Home.pm templates
+        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/home/index.html.ep)
+    * [photos/](https://github.com/tempire/MojoExample/blob/master/templates/photos/) - Photos.pm templates
+        * [index.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/photos/index.html.ep)
+        * [show.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/photos/show.html.ep)
+        * [show_set.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/photos/show_set.html.ep)
+    * [layouts/](https://github.com/tempire/MojoExample/blob/master/templates/layouts/)
+        * [default.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/layouts/default.html.ep)
+* [README.md](https://github.com/tempire/MojoExample/blob/master/README.md)           - This file
 
