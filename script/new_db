@@ -1,4 +1,4 @@
-use Modern::Perl +2012;
+use Modern::Perl;
 use lib 'lib';
 use Schema;
 use Test::Database;

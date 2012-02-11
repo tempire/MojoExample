@@ -1,4 +1,4 @@
-use Modern::Perl +2012;
+use Modern::Perl;
 use Test::More;
 use Test::Mojo;
 use Schema;

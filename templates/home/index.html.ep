@@ -1,5 +1,4 @@
 % layout 'default';
-
 <h1>Purpose</h1>
 <ul>
 <li>Compare a <a href="https://github.com/tempire/MojoExample/">full Mojolicious app</a> to a <a href="https://github.com/tempire/MojoExample/blob/master/mojolite">lite app</a> with the same functionality.</li>
@@ -32,8 +31,12 @@ and hot deployment support that just works</em>.</p>
 <p>(Both the Full and Lite apps are identical in functionality)</p>
 <h3>Requirements for running locally</h3>
 <p>Easy, one-step installation of modules:
-<br /><code>curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration</code></p>
-<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
+<br /></p>
+<pre>
+curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \
+                            Time::Duration File::Slurp SQL::Translator
+</pre>
+<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is Ã¼ber easy to install!</p>
 <h1>Index</h1>
 <ul>
 <li>
@@ -162,7 +165,8 @@ and hot deployment support that just works</em>.</p>
 <a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/">blogs/</a> - Blogs.pm templates
 
 <ul>
-<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a> - Tag Helpers</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a> - Tag Helpers</li>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep">show.html.ep</a></li>
 </ul>
 </li>

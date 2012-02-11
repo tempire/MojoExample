@@ -1,6 +1,6 @@
 package Test::Database;
 
-use Modern::Perl +2012;
+use Modern::Perl;
 use lib 'lib';
 use Carp;
 use Cwd qw/ abs_path getcwd /;

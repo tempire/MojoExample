@@ -43,7 +43,10 @@ To run the lite app:
 
 Easy, one-step installation of modules:
 <br />
-`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration`
+<pre>
+curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \
+                            Time::Duration File::Slurp SQL::Translator
+</pre>
 
 A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
 
