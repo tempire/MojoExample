@@ -2,7 +2,7 @@
 
 # Purpose
 
-- Compare a [full Mojolicious app](https://github.com/tempire/MojoExample/) to a [lite app](https://github.com/tempire/MojoExample/blog/master/mojolite) with the same functionality.
+- Compare a [full Mojolicious app](https://github.com/tempire/MojoExample/) to a [lite app](https://github.com/tempire/MojoExample/blob/master/mojolite) with the same functionality.
 - See an example of DBIx::Class usage with Mojolicious
 - See an example of tests for a Mojolicious app
 
