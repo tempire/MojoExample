@@ -27,7 +27,7 @@
 Heroku is running Hypnotoad, the *full featured UNIX optimized preforking 
 non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
-and hot deployment support that just works*
+and hot deployment support that just works*.
 
 # Locally
 
