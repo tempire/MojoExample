@@ -177,7 +177,7 @@ and hot deployment support that just works</em>.</p>
 curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \
                             Time::Duration File::Slurp SQL::Translator
 </pre>
-<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is Ã¼ber easy to install!</p>
+<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
 <h1>Index</h1>
 <ul>
 <li>
