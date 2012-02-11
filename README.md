@@ -18,15 +18,18 @@
   fixtures from t/fixtures/*
 
 
-## Requirements
-
-Easy, one-step installation of modules:
-<br />
-`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration`
-
-A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
-
 # Usage
+
+# Live
+
+<a href="http://mojoexample.herokuapp.com/">Running on Heroku</a>
+
+Heroku is running Hypnotoad, the *full featured UNIX optimized preforking 
+non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
+tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
+and hot deployment support that just works*
+
+# Locally
 
 To run the full app:
 `morbo script/mojo_full`
@@ -35,6 +38,15 @@ To run the lite app:
 `morbo mojolite`
 
 (Both the Full and Lite apps are identical in functionality)
+
+## Requirements for running locally
+
+Easy, one-step installation of modules:
+<br />
+`curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration`
+
+A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
+
 
 # Index
 
