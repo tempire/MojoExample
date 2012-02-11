@@ -14,10 +14,17 @@
 <li>The DBIx::Class schema connects to a provided sqlite3 database, test.db</li>
 <li>The controller tests create a new test.db, populated using fixtures from t/fixtures/*</li>
 <li>The schema tests use an in-memory sqlite3 database, populated using fixtures
-from t/fixtures</li>
+from t/fixtures/*</li>
 <li>Test::Database is a utility for populating the sqlite3 databases with
 fixtures from t/fixtures/*</li>
-</ul><h1>Usage</h1>
+</ul><h2>Requirements</h2>
+
+<p>Easy, one-step installation of modules:
+<br><code>curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration</code></p>
+
+<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
+
+<h1>Usage</h1>
 
 <p>To run the full app:
 <code>morbo script/mojo_full</code></p>
@@ -161,5 +168,5 @@ fixtures from t/fixtures/*</li>
 </li>
 <li>
 <em>mojolite</em>          - Mojolicious::Lite app, with all the application files listed above embedded</li>
+<li>README.md           - This file</li>
 </ul>
-
