@@ -13,7 +13,7 @@
 - The DBIx::Class schema connects to a provided sqlite3 database, test.db
 - The controller tests create a new test.db, populated using fixtures from t/fixtures/*
 - The schema tests use an in-memory sqlite3 database, populated using fixtures
-  from t/fixtures/
+  from t/fixtures/*
 - Test::Database is a utility for populating the sqlite3 databases with
   fixtures from t/fixtures/*
 
