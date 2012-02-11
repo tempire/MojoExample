@@ -1,13 +1,12 @@
 % layout 'default';
 
 <h1>Purpose</h1>
-
 <ul>
-<li>Compare a full Mojolicious app to a lite app with the same functionality.</li>
+<li>Compare a <a href="https://github.com/tempire/MojoExample/">full Mojolicious app</a> to a <a href="https://github.com/tempire/MojoExample/blob/master/mojolite">lite app</a> with the same functionality.</li>
 <li>See an example of DBIx::Class usage with Mojolicious</li>
 <li>See an example of tests for a Mojolicious app</li>
-</ul><h2>Notes</h2>
-
+</ul>
+<h2>Notes</h2>
 <ul>
 <li>Both apps make use of the DBIx::Class schema.</li>
 <li>The schema is in lib/Schema.pm, lib/Schema/*</li>
@@ -17,167 +16,183 @@
 from t/fixtures/*</li>
 <li>Test::Database is a utility for populating the sqlite3 databases with
 fixtures from t/fixtures/*</li>
-</ul><h1>Usage</h1>
-
+</ul>
+<h1>Usage</h1>
 <h1>Live</h1>
-
 <p><a href="http://mojoexample.herokuapp.com/">Running on Heroku</a></p>
-
 <p>Heroku is running Hypnotoad, the <em>full featured UNIX optimized preforking 
 non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
 and hot deployment support that just works</em>.</p>
-
 <h1>Locally</h1>
-
 <p>To run the full app:
 <code>morbo script/mojo_full</code></p>
-
 <p>To run the lite app:
 <code>morbo mojolite</code></p>
-
 <p>(Both the Full and Lite apps are identical in functionality)</p>
-
 <h2>Requirements for running locally</h2>
-
 <p>Easy, one-step installation of modules:
-<br><code>curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration</code></p>
-
-<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
-
+<br /><code>curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration</code></p>
+<p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is Ã¼ber easy to install!</p>
 <h1>Index</h1>
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib">lib/</a>
 
 <ul>
-<li>lib/
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm">MojoFull.pm</a>       - Mojolicious Application</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull">MojoFull/</a>         - Mojolicious Controllers
 
 <ul>
-<li>MojoFull.pm       - Mojolicious Application</li>
-<li>MojoFull/         - Mojolicious Controllers
-
-<ul>
-<li>Blogs.pm</li>
-<li>Home.pm</li>
-<li>Photos.pm</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Blogs.pm">Blogs.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Home.pm">Home.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Photos.pm">Photos.pm</a></li>
 </ul>
 </li>
-<li>Schema.pm         - DBIx::Class model </li>
-<li>Schema/
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm">Schema.pm</a>         - DBIx::Class model </li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema">Schema/</a>
 
 <ul>
-<li>Result/         - DBIx::Class Result classes
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result">Result/</a>         - DBIx::Class Result classes
 
 <ul>
-<li>Blog.pm</li>
-<li>BlogTag.pm</li>
-<li>Photo.pm</li>
-<li>Photoset.pm</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Blog.pm">Blog.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/BlogTag.pm">BlogTag.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photo.pm">Photo.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photoset.pm">Photoset.pm</a></li>
 </ul>
 </li>
-<li>ResultSet/      - DBIx::Class ResultSet classes
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/">ResultSet/</a>      - DBIx::Class ResultSet classes
 
 <ul>
-<li>Blog.pm</li>
-<li>Photo.pm</li>
-<li>Photoset.pm</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Test/
-
-<ul>
-<li>Database.pm     - Utility class for populating test fixtures</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>public/             - Static files
-
-<ul>
-<li>css/
-
-<ul>
-<li>main.css</li>
-</ul>
-</li>
-<li>images/
-
-<ul>
-<li>background.gif</li>
-<li>bender_promo.png</li>
-<li>box-bottom.png</li>
-<li>box-middle.gif</li>
-<li>box-top.png</li>
-<li>profile_top.png</li>
-</ul>
-</li>
-<li>script/             - Utilities
-
-<ul>
-<li>generate_schema   - Generates DBIx::Class schema from database file</li>
-<li>mojo_full*</li>
-<li>new_db            - Generates database file from DBIx::Class and fixtures</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>t/                  - Tests
-
-<ul>
-<li>fixtures/         - Fixtures (placeholder data) for tests
-
-<ul>
-<li>Blog.pl</li>
-<li>Photoset.pl</li>
-</ul>
-</li>
-<li>schema/           - DBIx::Class model tests
-
-<ul>
-<li>blog.t</li>
-<li>blog_tag.t</li>
-<li>photo.t</li>
-<li>photoset.t</li>
-</ul>
-</li>
-<li>home.t            - Home.pm controller tests</li>
-<li>blogs.t           - Blogs.pm controller tests</li>
-<li>photos.t          - Photos.pm controller tests</li>
-</ul>
-</li>
-<li>templates/
-
-<ul>
-<li>blogs/ - Blogs.pm templates
-
-<ul>
-<li>index.html.ep</li>
-<li>show.html.ep</li>
-</ul>
-</li>
-<li>home/ - Home.pm templates
-
-<ul>
-<li>index.html.ep</li>
-</ul>
-</li>
-<li>photos/ - Photos.pm templates
-
-<ul>
-<li>index.html.ep</li>
-<li>show.html.ep</li>
-<li>show_set.html.ep</li>
-</ul>
-</li>
-<li>layouts/
-
-<ul>
-<li>default.html.ep</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Blog.pm">Blog.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Photo.pm">Photo.pm</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Photoset.pm">Photoset.pm</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<em>mojolite</em>          - Mojolicious::Lite app, with all the application files listed above embedded</li>
-<li>README.md           - This file</li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/">Test/</a>
+
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/Database.pm">Database.pm</a>     - Utility class for populating test fixtures</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/public/">public/</a>             - Static files
+
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/public/css/">css/</a>
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/css/main.css">main.css</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/public/images/">images/</a>
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/background.gif">background.gif</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/bender_promo.png">bender_promo.png</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/box-bottom.png">box-bottom.png</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/box-middle.gif">box-middle.gif</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/box-top.png">box-top.png</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/profile_top.png">profile_top.png</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/script/">script/</a>             - Utilities
+
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/script/generate_schema">generate_schema</a>   - Generates DBIx::Class schema from database file</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/script/mojo_full">mojo_full*</a></li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/script/new_db">new_db</a>            - Generates database file from DBIx::Class and fixtures</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/">t/</a>                  - Tests
+
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/">fixtures/</a>         - Fixtures (placeholder data) for tests
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/Blog.pl">Blog.pl</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/Photoset.pl">Photoset.pl</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/schema/">schema/</a>           - DBIx::Class model tests
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/blog.t">blog.t</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/blog_tag.t">blog_tag.t</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/photo.t">photo.t</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/photoset.t">photoset.t</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/home.t">home.t</a>            - Home.pm controller tests</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/blogs.t">blogs.t</a>           - Blogs.pm controller tests</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/t/photos.t">photos.t</a>          - Photos.pm controller tests</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/">templates/</a>
+
+<ul>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/">blogs/</a> - Blogs.pm templates
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep">show.html.ep</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/home/">home/</a> - Home.pm templates
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/home/index.html.ep">index.html.ep</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/">photos/</a> - Photos.pm templates
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/index.html.ep">index.html.ep</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/show.html.ep">show.html.ep</a></li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/show_set.html.ep">show_set.html.ep</a></li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/templates/layouts/">layouts/</a>
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/layouts/default.html.ep">default.html.ep</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<em><a href="https://github.com/tempire/MojoExample/blob/master/mojolite">mojolite</a></em> - Mojolicious::Lite app, with all the application files listed above embedded</li>
+<li>
+<a href="https://github.com/tempire/MojoExample/blob/master/README.md">README.md</a>           - This file</li>
 </ul>
