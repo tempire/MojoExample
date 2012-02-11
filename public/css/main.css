@@ -1,7 +1,7 @@
 body {
    width: 100%;
    margin: 0;
-   font-family: "Lucida Grande", tahoma, sans-serif;
+   font-family: "helvetica neue", helvetica, Arial;
    font-size: 100%;
    background-color: #0E0E0E;
    background-image: url( /images/background.gif );
@@ -57,7 +57,6 @@ a {
 h1 {
    padding: 0 0 10px;
    margin: 0;
-   font-size: 1.3em;
 }
 ul.horizontal-list {
    color: gray;
@@ -196,7 +195,7 @@ table.structure td {
 #content {
    background-image: url( ../images/box-middle.gif );
    background-repeat:repeat-y;
-   padding: 0 30px 0 30px;
+   padding: 0 40px 0 40px;
    /* padding: 1px 45px 10px 35px; */
    /* padding-left: 35px; */
    /* width: 98%; */
@@ -412,7 +411,7 @@ form.blogs input {
       font-size: .8em;
    }
    .photoset {
-      margin-top: 20px;
+      margin-top: 0px;
 		overflow: hidden;
    }
    .photoset h1 {
