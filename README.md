@@ -2,7 +2,7 @@
 
 # Purpose
 
-- Compare a full Mojolicious app to a lite app with the same functionality.
+- Compare a [full Mojolicious app](https://github.com/tempire/MojoExample/) to a [lite app](https://github.com/tempire/MojoExample/blog/master/mojolite) with the same functionality.
 - See an example of DBIx::Class usage with Mojolicious
 - See an example of tests for a Mojolicious app
 
@@ -107,5 +107,6 @@ A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://pe
         * [show_set.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/photos/show_set.html.ep)
     * [layouts/](https://github.com/tempire/MojoExample/blob/master/templates/layouts/)
         * [default.html.ep](https://github.com/tempire/MojoExample/blob/master/templates/layouts/default.html.ep)
+* *[mojolite](https://github.com/tempire/MojoExample/blob/master/mojolite)* - Mojolicious::Lite app, with all the application files listed above embedded
 * [README.md](https://github.com/tempire/MojoExample/blob/master/README.md)           - This file
 
