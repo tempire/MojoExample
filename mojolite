@@ -159,19 +159,19 @@ from t/fixtures/*</li>
 fixtures from t/fixtures/*</li>
 </ul>
 <h1>Usage</h1>
-<h1>Live</h1>
+<h2>Live</h2>
 <p><a href="http://mojoexample.herokuapp.com/">Running on Heroku</a></p>
 <p>Heroku is running Hypnotoad, the <em>full featured UNIX optimized preforking 
 non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
 and hot deployment support that just works</em>.</p>
-<h1>Locally</h1>
+<h2>Locally</h2>
 <p>To run the full app:
 <code>morbo script/mojo_full</code></p>
 <p>To run the lite app:
 <code>morbo mojolite</code></p>
 <p>(Both the Full and Lite apps are identical in functionality)</p>
-<h2>Requirements for running locally</h2>
+<h3>Requirements for running locally</h3>
 <p>Easy, one-step installation of modules:
 <br /><code>curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite Time::Duration</code></p>
 <p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is Ã¼ber easy to install!</p>
