@@ -174,7 +174,7 @@ and hot deployment support that just works</em>.</p>
 <p>Easy, one-step installation of modules:
 <br /></p>
 <pre>
-curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \
+curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \\
                             Time::Duration File::Slurp SQL::Translator
 </pre>
 <p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
