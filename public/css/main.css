@@ -73,6 +73,9 @@ ul.horizontal-list li {
 ul.spaced {
    list-style-type: disc;
 }
+li {
+  margin: 10px 0 0 0;
+}
 .spaced li {
    padding: 10px 0;
 }
