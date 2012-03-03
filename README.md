@@ -2,6 +2,7 @@
 
 # Purpose
 
+- [Introduction](http://blogs.perl.org/users/tempire/2012/02/mojolicious-full-and-lite-apps---understanding-the-difference.html)
 - Compare a [full Mojolicious app](https://github.com/tempire/MojoExample/) to a [lite app](https://github.com/tempire/MojoExample/blob/master/mojolite) with the same functionality.
 - See an example of DBIx::Class usage with Mojolicious
 - See an example of tests for a Mojolicious app
