@@ -77,11 +77,6 @@ get '/photos/:id' => sub {
   $self->render(template => 'photos/show', photo => $photo);
 };
 
-get '/' => sub {
-  my $self = shift;
-  $self->render('index');
-};
-
 app->start;
 __DATA__
 
