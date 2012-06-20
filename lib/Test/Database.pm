@@ -58,7 +58,7 @@ sub insert_fixtures {
     warn "$fixture" if DEBUG;
 
     my $info = eval slurp $fixture;
-    chdir $cwd, croak "Cloud not insert fixture $fixture: $@" if $@;
+    chdir $cwd, croak "Could not insert fixture $fixture: $@" if $@;
 
     # Arrayrefs of rows, (dbic syntax) table defined by fixture filename
     if (ref $info->[0] eq 'HASH') {
