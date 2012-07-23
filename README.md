@@ -30,6 +30,8 @@ non-blocking I/O HTTP 1.1 and WebSocket server built around the very well
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
 and hot deployment support that just works*.
 
+To easily deploy your own Mojolicious app to Heroku, check out the <a href="http://git.io/mojoheroku">deploy heroku command</a>.
+
 ## Locally
 
 To run the full app:
