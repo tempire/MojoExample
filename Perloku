@@ -1,0 +1,2 @@
+#!/bin/sh
+/app/vendor/perl-deps/bin/hypnotoad --foreground script/mojo_full
