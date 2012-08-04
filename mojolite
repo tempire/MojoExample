@@ -168,7 +168,7 @@ fixtures from t/fixtures/*</li>
 </ul>
 <h1>Usage</h1>
 <h2>Live</h2>
-<p><a href="http://mojoexample.herokuapp.com/">Mojolicious running on Heroku</a></p>
+<p><a href="http://mojoexample.herokuapp.com/">Running on Heroku</a></p>
 <p>Heroku is running Hypnotoad, the <em>full featured UNIX optimized preforking 
 non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
 tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
