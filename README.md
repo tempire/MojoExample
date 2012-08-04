@@ -1,4 +1,4 @@
-<img src="http://empireenterprises.com/skitch//localhost_3000_photos-20120207-120707.png" />
+<img src="http://images.tempi.re/mojoexample_screenshot-20120803-231547.jpg" />
 
 # Purpose
 
