@@ -16,7 +16,7 @@ sub show {
   my $id   = $self->param('id');
 
   my $photo = $self->db->resultset('Photo')->find($id)
-    or $self->redirect_to("/photos"), return;
+    or $self->redirect_to('photos'), return;
 
   $self->render(template => 'photos/show', photo => $photo);
 }
@@ -26,7 +26,7 @@ sub show_set {
   my $id   = $self->param('id');
 
   my $set = $self->db->resultset('Photoset')->by_id_or_name($id)
-    or $self->redirect_to("/photos"), return;
+    or $self->redirect_to('photos'), return;
 
   $self->render(template => 'photos/show_set', set => $set);
 }

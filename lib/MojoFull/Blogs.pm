@@ -9,7 +9,7 @@ sub index {
     || qw/personal/;
 
   my @blogs = $self->db->resultset('Blog')->by_tags(@tags)
-    or return $self->redirect_to('/blogs');
+    or return $self->redirect_to('blogs');
 
   $self->render('blogs/index', blogs => [@blogs],);
 }
@@ -19,7 +19,7 @@ sub show {
   my $param = $self->stash('name');
 
   my $blog = $self->db->resultset('Blog')->by_id_or_name($param)
-    or return $self->redirect_to('/blogs');
+    or return $self->redirect_to('blogs');
 
   $self->render('blogs/show', blog => $blog);
 }
