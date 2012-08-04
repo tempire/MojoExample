@@ -10,6 +10,7 @@ has schema => sub {
 sub startup {
   my $self = shift;
 
+  $self->plugin('Config');
   $self->helper(db => sub { $self->app->schema });
 
   # Routes
