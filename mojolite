@@ -22,7 +22,7 @@ get '/' => sub {
 };
 
 get '/blogs' => sub {
-  shift->redirect_to('/blogs/tag/personal');
+  shift->redirect_to(blogstagtags => tags => 'personal');
 };
 
 get '/blogs/tag/(*tags)' => sub {
@@ -32,7 +32,7 @@ get '/blogs/tag/(*tags)' => sub {
   my @tags = grep $_ ne 'tag' => split '/' => $self->param('tags');
 
   my @blogs = $self->db->resultset('Blog')->by_tags(@tags)
-    or return $self->redirect_to('/blogs');
+    or return $self->redirect_to('blogs');
 
   $self->render('blogs/index', blogs => [@blogs],);
 };
@@ -42,7 +42,7 @@ get '/blogs/(:name)' => sub {
   my $param = $self->stash('name');
 
   my $blog = $self->db->resultset('Blog')->by_id_or_name($param)
-    or return $self->redirect_to('/blogs');
+    or return $self->redirect_to('blogs');
 
   $self->render('blogs/show', blog => $blog);
 };
@@ -62,7 +62,7 @@ get '/photos/:id' => (photoset => '') => sub {
   my $id   = $self->param('id');
 
   my $set = $self->db->resultset('Photoset')->by_id_or_name($id)
-    or $self->redirect_to("/photos"), return;
+    or $self->redirect_to('photos'), return;
 
   $self->render(template => 'photos/show_set', set => $set);
 };
@@ -72,7 +72,7 @@ get '/photos/:id' => sub {
   my $id   = $self->param('id');
 
   my $photo = $self->db->resultset('Photo')->find($id)
-    or $self->redirect_to("/photos"), return;
+    or $self->redirect_to('photos'), return;
 
   $self->render(template => 'photos/show', photo => $photo);
 };
