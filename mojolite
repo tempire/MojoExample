@@ -150,7 +150,7 @@ __DATA__
 % layout 'default';
 <h1>Purpose</h1>
 <ul>
-<li><a href="http://blogs.perl.org/users/tempire/2012/02/mojolicious-full-and-lite-apps---understanding-the-difference.html">Introduction</a></li>
+<li><a href="http://tempi.re/mojolicious-full-and-lite-apps-understanding-the-difference">Introduction</a></li>
 <li>Compare a <a href="https://github.com/tempire/MojoExample/">full Mojolicious app</a> to a <a href="https://github.com/tempire/MojoExample/blob/master/mojolite">lite app</a> with the same functionality.</li>
 <li>See an example of DBIx::Class usage with Mojolicious</li>
 <li>See an example of tests for a Mojolicious app</li>
