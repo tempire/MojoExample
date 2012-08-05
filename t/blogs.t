@@ -5,7 +5,9 @@ use Schema;
 use Test::Database;
 
 my $schema = Test::Database->new->create(Schema => 'test.db');
-my $t = Test::Mojo->new('MojoFull')->app(schema => $schema);
+
+my $t = Test::Mojo->new('MojoFull');
+$t->app->schema($schema);
 
 # Blog not found
 $t->get_ok('/blogs/bad_title')->status_is(302)
