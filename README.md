@@ -53,6 +53,7 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 
 A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
 
+If you *must* run on Perl 5.8, you can try a <a href="https://github.com/jamadam/mojo-legacy">back-ported version of Mojolicious</a>, but you're on your own :)
 
 # Index
 
