@@ -117,3 +117,8 @@ If you *must* run on Perl 5.8, you can try a <a href="https://github.com/jamadam
 * *[mojolite](https://github.com/tempire/MojoExample/blob/master/mojolite)* - Mojolicious::Lite app, with all the application files listed above embedded
 * [README.md](https://github.com/tempire/MojoExample/blob/master/README.md)           - This file
 
+# Copyright License
+
+Copyright (C) 2008-2014, Glen Hinkle.
+
+MojoExample is free software, you can redistribute it and/or modify it under the same terms as Perl5 (http://dev.perl.org/licenses/).
