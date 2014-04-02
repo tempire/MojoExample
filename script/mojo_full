@@ -17,5 +17,6 @@ EOF
 # Application
 $ENV{MOJO_APP} ||= 'MojoFull';
 
-# Start commands
-Mojolicious::Commands->start;
+# Start command line interface for application
+require Mojolicious::Commands;
+Mojolicious::Commands->start_app('MojoFull');
