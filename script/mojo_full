@@ -8,14 +8,11 @@ use lib join '/', File::Spec->splitdir(dirname(__FILE__)), 'lib';
 use lib join '/', File::Spec->splitdir(dirname(__FILE__)), '..', 'lib';
 
 # Check if Mojolicious is installed;
-die <<EOF unless eval 'use Mojolicious::Commands; 1';
+die <<EOF unless eval { require Mojolicious::Commands; 1 };
 It looks like you don't have the Mojolicious framework installed.
 Please visit http://mojolicio.us for detailed installation instructions.
 
 EOF
 
-# Application
-$ENV{MOJO_APP} ||= 'MojoFull';
-
 # Start commands
-Mojolicious::Commands->start;
+Mojolicious::Commands->start_app('MojoFull');
