@@ -35,7 +35,7 @@ sub create {
   my $dsn = "dbi:SQLite:dbname=$file";
   my $schema =
     $schema_name->connect($dsn, '', '', {quote_char => '`', name_sep => '.'});
-  $schema->deploy({quote_table_names => 1, quote_field_names => 1});
+  $schema->deploy;
 
   # Fixtures
   $self->insert_fixtures($file, $schema);

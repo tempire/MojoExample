@@ -21,10 +21,10 @@ $t->get_ok('/photos')->status_is(200)
   ->content_like(qr/\d+\s+photos in\s+\d+\s+albums/i);
 
 ok my $set_id =
-  $t->tx->res->dom('div#photosets > div.photo')->[0]->attrs('id'),
+  $t->tx->res->dom('div#photosets > div.photo')->[0]->{'id'},
   'set id';
 ok my $set_url =
-  $t->tx->res->dom('div#photosets > div.photo > a')->[0]->attrs('href'),
+  $t->tx->res->dom('div#photosets > div.photo > a')->[0]->{'href'},
   'set url';
 ok my $set_title =
   $t->tx->res->dom('div#photosets > div.photo > a div.title')->[0]->text,
@@ -38,7 +38,7 @@ $t->get_ok("/photos/$set_id")->status_is(200)->text_is(h1 => $set_title);
 $t->get_ok("/photos/$set_title")->status_is(200)->text_is(h1 => $set_title);
 
 ok my $photo_url =
-  $t->tx->res->dom('div.photoset a.slide')->[0]->attrs('href'), 'photo url';
+  $t->tx->res->dom('div.photoset a.slide')->[0]->{'href'}, 'photo url';
 like $photo_url => qr|^/photos/\d+$|;
 
 # Photo
