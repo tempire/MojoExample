@@ -34,26 +34,31 @@ To easily deploy your own Mojolicious app to Heroku, check out <a href="http://t
 
 ## Locally
 
-To run the full app:
-`morbo script/mojo_full`
-
-To run the lite app:
-`morbo mojolite`
-
-(Both the Full and Lite apps are identical in functionality)
-
-### Requirements for running locally
-
-Easy, one-step installation of modules:
-<br />
-<pre>
-curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \
-                            Time::Duration File::Slurp SQL::Translator
-</pre>
-
 A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!
 
 If you *must* run on Perl 5.8, you can try a <a href="https://github.com/jamadam/mojo-legacy">back-ported version of Mojolicious</a>, but you're on your own :)
+
+### Install
+
+	git clone git@github.com:tempire/MojoExample.git
+	cd MojoExample
+
+
+Install the Carton package manager. Carton will install all dependencies
+to the local/ sub-directory.
+
+	curl -L cpanmin.us | perl - Carton
+	carton install
+
+### Run
+
+#### Full app
+
+	carton exec morbo script/mojo_full
+
+#### Light app
+
+	carton exec morbo mojolite
 
 # Index
 

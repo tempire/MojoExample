@@ -2,6 +2,8 @@ package MojoFull;
 use Mojo::Base 'Mojolicious';
 use Schema;
 
+# Connects once for entire application. For real apps, consider using a helper
+# that can reconnect on each request if necessary.
 has schema => sub {
   return Schema->connect('dbi:SQLite:' . ($ENV{TEST_DB} || 'test.db'));
 };
@@ -15,9 +17,8 @@ sub startup {
   # Routes
   my $r = $self->routes;
 
+  # Requested id is a photoset?
   $r->add_condition(
-
-    # Requested id is a photoset?
     photoset => sub {
       my ($r, $c, $captures, $pattern) = @_;
 

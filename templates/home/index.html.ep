@@ -1,12 +1,16 @@
 % layout 'default';
 <h1>Purpose</h1>
+
 <ul>
 <li><a href="http://tempi.re/mojolicious-full-and-lite-apps-understanding-the-difference">Introduction</a></li>
 <li>Compare a <a href="https://github.com/tempire/MojoExample/">full Mojolicious app</a> to a <a href="https://github.com/tempire/MojoExample/blob/master/mojolite">lite app</a> with the same functionality.</li>
 <li>See an example of DBIx::Class usage with Mojolicious</li>
 <li>See an example of tests for a Mojolicious app</li>
 </ul>
+
+
 <h2>Notes</h2>
+
 <ul>
 <li>Both apps make use of the DBIx::Class schema.</li>
 <li>The schema is in lib/Schema.pm, lib/Schema/*</li>
@@ -17,40 +21,60 @@ from t/fixtures/*</li>
 <li>Test::Database is a utility for populating the sqlite3 databases with
 fixtures from t/fixtures/*</li>
 </ul>
+
+
 <h1>Usage</h1>
+
 <h2>Live</h2>
+
 <p><a href="http://mojoexample.herokuapp.com/">Running on Heroku</a></p>
-<p>Heroku is running Hypnotoad, the <em>full featured UNIX optimized preforking 
-non-blocking I/O HTTP 1.1 and WebSocket server built around the very well 
-tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev 
+
+<p>Heroku is running Hypnotoad, the <em>full featured UNIX optimized preforking
+non-blocking I/O HTTP 1.1 and WebSocket server built around the very well
+tested and reliable Mojo::Server::Daemon with IPv6, TLS, Bonjour, libev
 and hot deployment support that just works</em>.</p>
-<p>
-To easily deploy your own Mojolicious app to Heroku, check out <a href="http://tempire.github.com/mojolicious-command-deploy-heroku">Deploy Perl Mojolicious web apps to Heroku</a>.
-</p>
+
+<p>To easily deploy your own Mojolicious app to Heroku, check out <a href="http://tempire.github.com/mojolicious-command-deploy-heroku">Deploy Perl Mojolicious web apps to Heroku</a>.</p>
+
 <h2>Locally</h2>
-<p>To run the full app:
-<code>morbo script/mojo_full</code></p>
-<p>To run the lite app:
-<code>morbo mojolite</code></p>
-<p>(Both the Full and Lite apps are identical in functionality)</p>
-<h3>Requirements for running locally</h3>
-<p>Easy, one-step installation of modules:
-<br /></p>
-<pre>
-curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTime::Format::SQLite \\
-                            Time::Duration File::Slurp SQL::Translator
-</pre>
+
 <p>A minimum of Perl 5.10 is required.  If your Perl is too old, <a href="http://perlbrew.pl/">Perlbrew</a> is über easy to install!</p>
+
+<p>If you <em>must</em> run on Perl 5.8, you can try a <a href="https://github.com/jamadam/mojo-legacy">back-ported version of Mojolicious</a>, but you're on your own :)</p>
+
+<h3>Install</h3>
+
+<pre><code>git clone git@github.com:tempire/MojoExample.git
+cd MojoExample
+</code></pre>
+
+<p>Install the Carton package manager. Carton will install all dependencies
+to the local/ sub-directory.</p>
+
+<pre><code>curl -L cpanmin.us | perl - Carton
+carton install
+</code></pre>
+
+<h3>Run</h3>
+
+<h4>Full app</h4>
+
+<pre><code>carton exec morbo script/mojo_full
+</code></pre>
+
+<h4>Light app</h4>
+
+<pre><code>carton exec morbo mojolite
+</code></pre>
+
 <h1>Index</h1>
-<ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib">lib/</a>
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm">MojoFull.pm</a>       - Mojolicious Application</li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull">MojoFull/</a>         - Mojolicious Controllers
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib">lib/</a>
+
+<ul>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull.pm">MojoFull.pm</a>       - Mojolicious Application</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull">MojoFull/</a>         - Mojolicious Controllers
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Blogs.pm">Blogs.pm</a></li>
@@ -58,14 +82,11 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 <li><a href="https://github.com/tempire/MojoExample/blob/master/lib/MojoFull/Photos.pm">Photos.pm</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm">Schema.pm</a>         - DBIx::Class model </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema">Schema/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema.pm">Schema.pm</a>         - DBIx::Class model</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema">Schema/</a>
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result">Result/</a>         - DBIx::Class Result classes
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result">Result/</a>         - DBIx::Class Result classes
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Blog.pm">Blog.pm</a></li>
@@ -74,8 +95,7 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 <li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/Result/Photoset.pm">Photoset.pm</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/">ResultSet/</a>      - DBIx::Class ResultSet classes
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/">ResultSet/</a>      - DBIx::Class ResultSet classes
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Schema/ResultSet/Blog.pm">Blog.pm</a></li>
@@ -85,29 +105,24 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 </li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/">Test/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/">Test/</a>
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/Database.pm">Database.pm</a>     - Utility class for populating test fixtures</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/lib/Test/Database.pm">Database.pm</a>     - Utility class for populating test fixtures</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/public/">public/</a>             - Static files
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/">public/</a>             - Static files
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/public/css/">css/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/css/">css/</a>
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/public/css/main.css">main.css</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/public/images/">images/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/">images/</a>
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/background.gif">background.gif</a></li>
@@ -118,33 +133,27 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 <li><a href="https://github.com/tempire/MojoExample/blob/master/public/images/profile_top.png">profile_top.png</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/script/">script/</a>             - Utilities
+<li><a href="https://github.com/tempire/MojoExample/blob/master/script/">script/</a>             - Utilities
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/script/generate_schema">generate_schema</a>   - Generates DBIx::Class schema from database file</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/script/generate_schema">generate_schema</a>   - Generates DBIx::Class schema from database file</li>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/script/mojo_full">mojo_full*</a></li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/script/new_db">new_db</a>            - Generates database file from DBIx::Class and fixtures</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/script/new_db">new_db</a>            - Generates database file from DBIx::Class and fixtures</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/">t/</a>                  - Tests
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/">t/</a>                  - Tests
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/">fixtures/</a>         - Fixtures (placeholder data) for tests
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/">fixtures/</a>         - Fixtures (placeholder data) for tests
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/Blog.pl">Blog.pl</a></li>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/t/fixtures/Photoset.pl">Photoset.pl</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/schema/">schema/</a>           - DBIx::Class model tests
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/">schema/</a>           - DBIx::Class model tests
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/blog.t">blog.t</a></li>
@@ -153,36 +162,28 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 <li><a href="https://github.com/tempire/MojoExample/blob/master/t/schema/photoset.t">photoset.t</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/home.t">home.t</a>            - Home.pm controller tests</li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/blogs.t">blogs.t</a>           - Blogs.pm controller tests</li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/t/photos.t">photos.t</a>          - Photos.pm controller tests</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/home.t">home.t</a>            - Home.pm controller tests</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/blogs.t">blogs.t</a>           - Blogs.pm controller tests</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/t/photos.t">photos.t</a>          - Photos.pm controller tests</li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/">templates/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/">templates/</a>
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/">blogs/</a> - Blogs.pm templates
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/">blogs/</a> - Blogs.pm templates
 
 <ul>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a> - Tag Helpers</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/index.html.ep">index.html.ep</a> - Tag Helpers</li>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/blogs/show.html.ep">show.html.ep</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/home/">home/</a> - Home.pm templates
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/home/">home/</a> - Home.pm templates
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/home/index.html.ep">index.html.ep</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/">photos/</a> - Photos.pm templates
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/">photos/</a> - Photos.pm templates
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/index.html.ep">index.html.ep</a></li>
@@ -190,8 +191,7 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/photos/show_set.html.ep">show_set.html.ep</a></li>
 </ul>
 </li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/templates/layouts/">layouts/</a>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/templates/layouts/">layouts/</a>
 
 <ul>
 <li><a href="https://github.com/tempire/MojoExample/blob/master/templates/layouts/default.html.ep">default.html.ep</a></li>
@@ -199,8 +199,13 @@ curl -L cpanmin.us | perl - Mojolicious Modern::Perl DBIx::Class DateTime DateTi
 </li>
 </ul>
 </li>
-<li>
-<em><a href="https://github.com/tempire/MojoExample/blob/master/mojolite">mojolite</a></em> - Mojolicious::Lite app, with all the application files listed above embedded</li>
-<li>
-<a href="https://github.com/tempire/MojoExample/blob/master/README.md">README.md</a>           - This file</li>
+<li><em><a href="https://github.com/tempire/MojoExample/blob/master/mojolite">mojolite</a></em> - Mojolicious::Lite app, with all the application files listed above embedded</li>
+<li><a href="https://github.com/tempire/MojoExample/blob/master/README.md">README.md</a>           - This file</li>
 </ul>
+
+
+<h1>Copyright License</h1>
+
+<p>Copyright (C) 2008-2014, Glen Hinkle.</p>
+
+<p>MojoExample is free software, you can redistribute it and/or modify it under the same terms as Perl5 (http://dev.perl.org/licenses/).</p>
