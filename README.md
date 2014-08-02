@@ -1,4 +1,4 @@
-<img src="http://images.tempi.re/mojoexample_screenshot-20120803-231547.jpg" />
+<img src="https://cloud.githubusercontent.com/assets/63439/3788824/8ef74550-1a7a-11e4-9313-4a4009bc859a.png" />
 
 # Purpose
 
